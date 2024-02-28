@@ -35,9 +35,12 @@ export class ColorRepresentComponent implements AfterViewInit, OnChanges {
    this.colorEle.nativeElement.style.backgroundColor = this.getBackgroundColor(this.day.contibutionsCount);
   }
   getBackgroundColor(range: number){
+    if(range == 0){
+      return '#EBEDF0'
+    }
     let color = null
     this.colorCollection.forEach((colorRange)=>{
-      if(range> colorRange.range[0] && range < colorRange.range[1]){
+      if(range >= colorRange.range[0] && range <= colorRange.range[1]){
         color = colorRange.color;
       }
     })
