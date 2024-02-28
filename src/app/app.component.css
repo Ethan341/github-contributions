@@ -17,3 +17,6 @@ body{
     background: grey;
     right: -9px
   }
+.range{
+    display: flex;
+}
