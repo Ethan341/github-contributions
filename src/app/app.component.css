@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    background-color: azure;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: grey;
+    right: -9px
+  }

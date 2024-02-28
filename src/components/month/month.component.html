@@ -1,0 +1,13 @@
+<div class="monthName">
+    <p>month Nam: {{monthData.monthName}}</p>
+</div>
+
+<div class="week" *ngFor="let week of monthData.contibutions">
+    <ng-container *ngFor="let day of week">
+        <span style="margin: 7px;">   Date : {{day.date}} <app-color-represent [day]="day" [contributionCount]="monthData.contibutionsCount"></app-color-represent> 
+            {{day.contibutionsCount}} 
+            </span>
+            <br>
+    </ng-container>
+    
+</div>
